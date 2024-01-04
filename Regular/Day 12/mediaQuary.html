@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Quary</title>
+</head>
+<style>
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    .search-bar{
+        width: 400px;
+        padding: 10px 20px;
+        border: 0px ;
+        border-radius: 30px;
+        box-shadow: 3px 3px 9px gray;
+        transition: all 0.5s;
+        margin-bottom: 10px;
+    }
+    .g{
+        display: none;
+    }
+    .recent{
+        display: none;
+        width: 400px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        box-shadow: 3px 4px 9px gray;
+        color: gray;
+        
+    }
+    .fst,
+    .sec,
+    .thr
+    {
+        border-bottom: 1px solid rgb(204, 203, 203);
+        padding: 10px;
+    }
+    .forth{
+        padding: 10px;
+    }
+    @media (max-width:600px){
+        .search-bar{
+            display: none;
+        }
+        .g{
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 600;
+            color: rgb(151, 151, 151);
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            box-shadow: 3px 3px 9px gray;
+            border: 0px;
+        }
+    }
+    @media (min-width : 601px) and (max-width : 1024px){
+        .search-bar{
+            display: inline-block;
+        }
+    }
+    @media (min-width:1025px){
+        .recent{
+            display: block;
+        }
+    }
+    
+    
+</style>
+<body>
+    <div class="fam">
+        <input class="search-bar" type="text" placeholder="Google">
+        <button class="g">G</button>
+        <div class="recent">
+            <div class="fst">sss</div>
+            <div class="sec">sfwsw</div>
+            <div class="thr">dsf</div>
+            <div class="forth">sdfR</div>
+        </div>
+    </div>
+</body>
+</html>

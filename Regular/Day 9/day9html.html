@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .headline{
+            color:indigo;
+        }
+
+        label{
+            color: blueviolet;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="headline">Registration Form</h1>
+    <table>
+        
+    <div>
+        <form>
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input id="name" type="text" name="name" placeholder="Type your Name" required /></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input id="age" type="number" name="age" placeholder="Type your Age" required /></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input id="email" type="email" name="email" placeholder="Type your Email" required /></td>
+            </tr>
+            <tr>
+                <td><label for="dob">DOB:</label></td>
+                <td><input id="dob" type="date" name="dob" /></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td><select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Others</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="aadhar">Aadhar Card</label></td>
+                <td><input type="checkbox" id="aadhar" name="aadhar"></td>
+            </tr>
+            <tr>
+                <td><label for="password"  >Password:</label></td>
+                <td><input type="password" id="password" name="password" placeholder="Type your Password" required /></td>
+            </tr>
+            <tr>
+                <td><label for="Confirm-Password">Confirm Password:</label></td>
+                <td><input type="Confirm-Password" id="Confirm-Password" name="Confirm-Password" placeholder="Confirm your Password" required /></td>
+            </tr>
+        </form>
+    </div>
+</table>
+
+</body>
+</html>
