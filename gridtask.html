@@ -3,53 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>day 10</title>
-    <style>
-        .inline-element{
-            display: inline;
-            background-color: aqua;
-        }
-
-        a:link{
-            color: black;
-        }
-
-        a:visited{
-            color: red;
-        }
-        a:hover{
-            color: dodgerblue;
-
-        }
-
-        button{
-            text-align: center;
-        }
-
-        
-        button:hover{
-            background-color: green;
-            color: white;
-        }
-        
-        button:active{
-        background-color: black;
-        color: white;   
-        }
-
-        button:visited{
-            background-color: blueviolet;
-        }
-
-        li:nth-child(odd){
-                background-color: darkcyan;
-        }
-
-        li:nth-child(even){
-                background-color: dodgerblue;
-        }
-
-        .container{
+    <title>Document</title>
+</head>
+<style>
+    .container{
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: 150px 150px 150px;
@@ -58,27 +15,9 @@
             border: 1px solid black;
             text-align: center;
         }
-    </style>
-</head>
+</style>
 <body>
-    <h1 class="inline-element">Heading 1</h1>
-    <h2 class="inline-element">Heading 2</h2>
-    <h3 class="inline-element">Heading 3</h3>
-
-    <a href="https://www.amazon.in/" target="_blank">Click to Visit - Amazon</a>
-    <br>
-    <br>
-
-    <button onclick="">hellon</button>
-
-    <ul>
-        <li>D</li>
-        <li>H</li>
-        <li>A</li>
-        <li>Y</li>
-        <li>A</li>
-    </ul>
-
+    <h1>Grid</h1>
     <div class="container">
         <div class="items"style="grid-column: 1; grid-row: 1; background-color:lightgreen; ">item 1</div>
         <div class="items"style="grid-column: 2/4; grid-row: 1; background-color:lightgreen;">item 2</div>
