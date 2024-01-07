@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="bodyid">
+    <center>
+      <h1 id="h1">JS, DOM Micro Task</h1>
+    </center>
+    <div id="container">
+      <div id="container2">
+        <div id="container21">
+          <span id="fstspan"></span>
+          <br />
+          <textarea
+            class="textarea"
+            name="textarea"
+            id="textarea"
+            cols="60"
+            maxlength="300"
+            rows="10"
+            placeholder="Start Typing..."
+          ></textarea>
+          <p><span id="charCount">(0/300)</span></p>
+          <span id="coordi" class="coordi">Coordinates: </span>
+        </div>
+        <div id="container22">
+          <label for="decimalInput" class="label1"
+            >Decimal Number
+          </label>
+          <input
+            class="d-input"
+            type="number"
+            id="decimalInput"
+            placeholder="Enter Decimal Number"
+          />
+          <br>
+          <button id="binaryButton" class="C-button">Convert to Binary</button>
+          <button id="HexadecimalButton" class="C-button">
+            Convert to Hexadecimal
+          </button>
+          <br />
+          <div id="BinaryOutput" class="bh-output"></div>
+          <div id="HexadecimalOutput" class="bh-output"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
