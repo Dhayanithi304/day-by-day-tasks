@@ -93,7 +93,7 @@ document.addEventListener("keydown", (event) => {
   if (
     event.target.tagName.toLowerCase() != "textarea" &&
     event.target.tagName.toLowerCase() != "input" &&
-    event.target.tagName.toLowerCase() != "div" 
+    event.target.tagName.toLowerCase() != "div"
   ) {
     if (event.code == "Space") {
       alert("Thank You..!");
@@ -104,31 +104,56 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-
 var editable = document.getElementById("editable");
 
-editable.addEventListener("mouseover" ,() => {
-  editable.style.border ="1px dashed blue"; 
-})
+editable.addEventListener("mouseover", () => {
+  editable.style.border = "1px dashed blue";
+});
 
-editable.addEventListener("mouseout" ,() => {
-  editable.style.border ="1px solid gray"; 
-})
+editable.addEventListener("mouseout", () => {
+  editable.style.border = "1px solid gray";
+});
 
 var changeColor = document.getElementById("changeColor");
 var changeFontSize = document.getElementById("changeFontSize");
 
-changeColor.addEventListener("click",()=>{
+changeColor.addEventListener("click", () => {
   var color = prompt("Enter a color (e.g., red, #00ff00):");
-  if(color != null){
-    document.execCommand("foreColor", false,color);
+  if (color != null) {
+    document.execCommand("foreColor", false, color);
   }
-})
+});
 
-changeFontSize.addEventListener("click",()=>{
+changeFontSize.addEventListener("click", () => {
   var fontSize = prompt("Enter a font size (e.g., 16px):");
-  if(fontSize != null){
-    document.execCommand("fontSize", false,fontSize);
+  if (fontSize != null) {
+    document.execCommand("fontSize", false, fontSize);
   }
-})
+});
 
+document.getElementById("myForm").addEventListener("submit", (event) => {
+  resetErrorMessages();
+
+  var username = document.getElementById("username").value;
+  if (username === "") {
+    displayError("usernameError", "Username is requried");
+    event.preventDefault();
+  }
+  var password = document.getElementById("password").value;
+  if (password === "") {
+    displayError("passwordError", "Password is required");
+    event.preventDefault();
+  }
+});
+
+function displayError(elementId, errorMessage) {
+  var errorElement = document.getElementById(elementId);
+  errorElement.textContent = errorMessage;
+}
+
+function resetErrorMessages() {
+  var errorElements = document.querySelectorAll(".error");
+  errorElements.forEach(function (element) {
+    element.textContent = "";
+  });
+}
