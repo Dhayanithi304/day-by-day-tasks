@@ -64,3 +64,71 @@ HexadecimalButton.addEventListener("click", () => {
       "Invalid input. Please enter a valid decimal number.";
   }
 });
+
+var elem = document.documentElement;
+var fullscreenB = document.getElementById("FullscreenB");
+var ExitscreenB = document.getElementById("ExitscreenB");
+
+fullscreenB.addEventListener("click", () => {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+});
+
+ExitscreenB.addEventListener("click", () => {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (
+    event.target.tagName.toLowerCase() != "textarea" &&
+    event.target.tagName.toLowerCase() != "input" &&
+    event.target.tagName.toLowerCase() != "div" 
+  ) {
+    if (event.code == "Space") {
+      alert("Thank You..!");
+      // close();
+    } else {
+      alert("Invalid Key Pressed");
+    }
+  }
+});
+
+
+var editable = document.getElementById("editable");
+
+editable.addEventListener("mouseover" ,() => {
+  editable.style.border ="1px dashed blue"; 
+})
+
+editable.addEventListener("mouseout" ,() => {
+  editable.style.border ="1px solid gray"; 
+})
+
+var changeColor = document.getElementById("changeColor");
+var changeFontSize = document.getElementById("changeFontSize");
+
+changeColor.addEventListener("click",()=>{
+  var color = prompt("Enter a color (e.g., red, #00ff00):");
+  if(color != null){
+    document.execCommand("foreColor", false,color);
+  }
+})
+
+changeFontSize.addEventListener("click",()=>{
+  var fontSize = prompt("Enter a font size (e.g., 16px):");
+  if(fontSize != null){
+    document.execCommand("fontSize", false,fontSize);
+  }
+})
+
