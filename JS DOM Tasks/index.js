@@ -93,7 +93,7 @@ document.addEventListener("keydown", (event) => {
   if (
     event.target.tagName.toLowerCase() != "textarea" &&
     event.target.tagName.toLowerCase() != "input" &&
-    event.target.tagName.toLowerCase() != "div"
+    event.target.tagName.toLowerCase() != "div" 
   ) {
     if (event.code == "Space") {
       alert("Thank You..!");
