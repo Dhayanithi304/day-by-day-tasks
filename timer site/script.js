@@ -1,48 +1,72 @@
 var h1 = document.getElementById("h1");
 
-setTimeout(count10,2000);
-setTimeout(count9,3000);
-setTimeout(count8,4000);
-setTimeout(count7,5000);
-setTimeout(count6,6000);
-setTimeout(count5,7000);
-setTimeout(count4,8000);
-setTimeout(count3,9000);
-setTimeout(count2,10000);
-setTimeout(count1,11000);
-setTimeout(done,12000);
+count10(count9);
 
-function count10(){
-  h1.innerText = "10";
-};
-function count9(){
-  h1.innerText = "9";
-  };
-function count8(){
-  h1.innerText = "8";
-};
-function count7(){
-  h1.innerText = "7";
-};
-function count6(){
-  h1.innerText = "6";
-};
-function count5(){
-  h1.innerText = "5";
-};
-function count4(){
-  h1.innerText = "4";
-};
-function count3(){
-  h1.innerText = "3";
-  };
-function count2(){
-  h1.innerText = "2";
-};
-function count1(){
-  h1.innerText = "1";
-};
-function done(){
-  h1.innerText = "HAVE A GOOD DAY :)"; 
-  h1.style.fontSize = "60px"
-};
+function count10(callback) {
+  setTimeout(() => {
+    h1.innerText = "10";
+    callback();
+  }, 2000);
+}
+function count9() {
+  setTimeout(() => {
+    h1.innerText = "9";
+    count8(count7);
+  }, 3000);
+}
+
+function count8(callback) {
+  setTimeout(() => {
+    h1.innerText = "8";
+    callback();
+  }, 4000);
+}
+
+function count7() {
+  setTimeout(() => {
+    h1.innerText = "7";
+    count6(count5);
+  }, 5000);
+}
+function count6(callback) {
+  setTimeout(() => {
+    h1.innerText = "6";
+    callback();
+  }, 6000);
+}
+function count5() {
+  setTimeout(() => {
+    h1.innerText = "5";
+    count4(count3);
+  }, 7000);
+}
+function count4(callback) {
+  setTimeout(() => {
+    h1.innerText = "4";
+    callback();
+  }, 8000);
+}
+function count3() {
+  setTimeout(() => {
+    h1.innerText = "3";
+    count2(count1);
+  }, 9000);
+}
+function count2(callback) {
+  setTimeout(() => {
+    h1.innerText = "2";
+    callback();
+  }, 10000);
+}
+function count1() {
+  setTimeout(() => {
+    h1.innerText = "1";
+    done();
+  }, 11000);
+}
+function done() {
+  setTimeout(() => {
+    h1.innerText = "HAVE A GOOD DAY :)";
+    h1.style.fontSize = "60px";
+  }, 12000);
+}
